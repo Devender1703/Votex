@@ -1,14 +1,12 @@
 # Votex
 Dapp for voting built on ethereum platform   
 
-### Solftware Requirement 
-User should configure machine with following requirements.
+## Solftware Requirement 
 
-**NPM and Node**
-Install latest version of npm manager and Node. 
+#### NPM and Node
 
-**Truffle**
-Truffle is used here to compile, deploy and test the Dapp.  
+#### Truffle
 
-**Testrpc**
-To deploy smart contract on private blockchain.
+#### TestRPC
+
+#### Web3.js
