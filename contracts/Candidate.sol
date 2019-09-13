@@ -1,4 +1,4 @@
-pragma solidity >= 0.4.0 < 0.7.0;
+pragma solidity ^0.5.0;
 
 contract Candidate
 {
@@ -10,25 +10,17 @@ contract Candidate
         // other info
     }
 
-    mapping(address => CandidateInfo) CandidateList;
+    mapping(address => CandidateInfo) public candidateList;
 
-    function SetCandidateInfo(address candidateAddr, string memory _name, uint _age, uint _totalVotes) public view 
+    function SetCandidateInfo(address candidateAddr, string memory _name, uint _age, uint _totalVotes) public
     {
-        CandidateInfo memory candidate = CandidateList[candidateAddr];
-        candidate.name = _name;
-        candidate.age = _age;
-        candidate.totalVotes = _totalVotes;
+        candidateList[candidateAddr].name = _name;
+        candidateList[candidateAddr].age = _age;
+        candidateList[candidateAddr].totalVotes = _totalVotes;
     }
 
-    function GetVote(address candidateAddr) public view
+    function GetVote(address candidateAddr) public
     {
-        CandidateInfo memory candidate = CandidateList[candidateAddr];
-        candidate.totalVotes += 1;
-    }
-
-    function GetResult(address candidateAddr) public view returns(uint)
-    {
-        CandidateInfo memory candidate = CandidateList[candidateAddr];
-        return candidate.totalVotes; 
+        candidateList[candidateAddr].totalVotes += 1; 
     }
 }
