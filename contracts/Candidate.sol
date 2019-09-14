@@ -11,12 +11,21 @@ contract Candidate
     }
 
     mapping(address => CandidateInfo) public candidateList;
+    address[] public candidateAddrList;
 
-    function SetCandidateInfo(address candidateAddr, string memory _name, uint _age, uint _totalVotes) public
+    function SetCandidateInfo(address candidateAddr, string memory _name, uint _age) public
     {
         candidateList[candidateAddr].name = _name;
         candidateList[candidateAddr].age = _age;
-        candidateList[candidateAddr].totalVotes = _totalVotes;
+        candidateList[candidateAddr].totalVotes = 0;
+
+        candidateAddrList.push(candidateAddr);
+    }
+
+    function GetCandidateName(uint8 index) public view returns(string memory)
+    {
+        address addr = candidateAddrList[index];
+        return candidateList[addr].name;
     }
 
     function GetVote(address candidateAddr) public

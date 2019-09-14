@@ -28,6 +28,6 @@ contract Organizer
     function SetVote(address _voterAddress, address _candidateAddress) public
     {
         instanceVoter.GiveVote(_voterAddress);
-        instanceVoter.GiveVote(_candidateAddress);
+        instanceCandidate.GetVote(_candidateAddress);
     }
 }

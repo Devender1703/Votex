@@ -10,13 +10,22 @@ contract Voter
     }
 
     mapping(address => voterInfo) public voterList;
+    address[] public voterAddrList;
 
     function SetVoterInfo(address _voterAddress, string memory _name, uint16 _age) 
     public
     {
         voterList[_voterAddress].name = _name;
         voterList[_voterAddress].age = _age;
-        voterList[_voterAddress].voted = false; 
+        voterList[_voterAddress].voted = false;
+
+        voterAddrList.push(_voterAddress); 
+    }
+    
+    function GetVoterName(uint8 index) public view returns(string memory)
+    {   
+        address addr = voterAddrList[index];
+        return (voterList[addr].name);
     }
 
     function GiveVote(address _voterAddress) public returns(address)
