@@ -1,0 +1,22 @@
+{
+  "name": "votex",
+  "version": "1.0.0",
+  "description": "A dapp for voting ",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kakashi-Of-Saringan/Votex.git"
+  },
+  "author": "Devendra Shaktawat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kakashi-Of-Saringan/Votex/issues"
+  },
+  "homepage": "https://github.com/kakashi-Of-Saringan/Votex#readme"
+}
