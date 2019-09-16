@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/kakashi-Of-Saringan/Votex/issues"
   },
-  "homepage": "https://github.com/kakashi-Of-Saringan/Votex#readme"
+  "homepage": "https://github.com/kakashi-Of-Saringan/Votex#readme",
+  "devDependencies": {
+    "truffle-hdwallet-provider": "^1.0.17"
+  }
 }
