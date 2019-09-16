@@ -22,15 +22,14 @@ contract Voter
         voterAddrList.push(_voterAddress); 
     }
     
-    function GetVoterName(uint8 index) public view returns(string memory)
+    function GetVoterName(address addr) public view returns(string memory)
     {   
-        address addr = voterAddrList[index];
         return (voterList[addr].name);
     }
 
     function GiveVote(address _voterAddress) public returns(address)
     {
-        require(voterList[_voterAddress].voted == true, "Voter already voted");
+        require(voterList[_voterAddress].voted != true, "Voter already voted");
 
         voterList[_voterAddress].voted = true;
         return(_voterAddress);

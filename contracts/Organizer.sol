@@ -13,6 +13,8 @@ contract Organizer
     }
 
     EventInfo public eventInfo;
+    uint private res = 0;
+    string private winner;
 
     function GetEventInfo(string memory _eventName, uint16 _totalCandidate, uint16 _totalVoter)
     public
@@ -29,5 +31,21 @@ contract Organizer
     {
         instanceVoter.GiveVote(_voterAddress);
         instanceCandidate.GetVote(_candidateAddress);
+    }
+
+    function Result() public returns(string memory)
+    {
+        for(uint8 i = 0; i < eventInfo.totalCandidate; i++)
+        {
+           address addr = instanceCandidate.candidateAddrList(i);
+
+           if(res < instanceCandidate.GetCandidateVotes(addr))
+           {
+               res = instanceCandidate.GetCandidateVotes(addr);
+               winner = instanceCandidate.GetCandidateName(addr);
+           }
+        }
+
+        return winner;
     }
 }

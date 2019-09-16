@@ -22,10 +22,14 @@ contract Candidate
         candidateAddrList.push(candidateAddr);
     }
 
-    function GetCandidateName(uint8 index) public view returns(string memory)
+    function GetCandidateName(address addr) public view returns(string memory)
     {
-        address addr = candidateAddrList[index];
         return candidateList[addr].name;
+    }
+
+    function GetCandidateVotes(address addr) public view returns(uint)
+    {
+        return candidateList[addr].totalVotes;
     }
 
     function GetVote(address candidateAddr) public
