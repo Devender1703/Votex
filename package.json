@@ -20,6 +20,10 @@
   },
   "homepage": "https://github.com/kakashi-Of-Saringan/Votex#readme",
   "devDependencies": {
-    "truffle-hdwallet-provider": "^1.0.17"
+    "truffle-hdwallet-provider": "^1.0.17",
+    "web3": "^1.2.1"
+  },
+  "dependencies": {
+    "web3": "github:ethereum/web3.js"
   }
 }
