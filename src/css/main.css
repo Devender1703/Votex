@@ -1,0 +1,25 @@
+#head {
+    text-align: center;
+}
+
+#candidate-button{
+    position: relative;
+    left: 140px;
+}
+
+#voter-button{
+    position: relative;
+    left: 1000px;
+    top: -20px;
+}
+
+.candidate-table{
+    position: relative;
+    left: 100px;
+}
+
+.voter-table{
+    position: relative;
+    left: 900px;
+    top: -20px;
+}
