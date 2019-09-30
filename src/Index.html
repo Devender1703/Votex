@@ -18,7 +18,7 @@
                <h1>Votex</h1>
             </div>
 
-            <div class = "candidate-table">
+            <div id = "candidate-table">
             <table>
                 <tr>
                     <th>Name of candidate</th>
@@ -27,7 +27,7 @@
             </table>
            </div>
             
-           <div class = "voter-table">
+           <div id = "voter-table">
             <table>
                 <tr>
                     <th>Name of voter</th>
@@ -35,9 +35,28 @@
                 </tr>
             </table>
             </div>
+
+            <form id = "CandidateForm">
+                Candidate Name :- <br>
+                <input type = "text" id = "candidateName"> <br>
+                Candidate address :- <br>
+                <input type = "text" id = "candidateAddress"> <br>
+                Candidate Age :- <br>
+                <input type = "text" id = "candidateAge"><br>
+            </form>
+            <br>
             <div id = "candidate-button">
-               <button>Add candidate</button>
+                    <button>Add candidate</button>
             </div>
+
+            <form id = "VoterForm">
+                Voter Name :- <br>
+                <input type = "text" id = "VoterName"> <br>
+                Voter address :- <br>
+                <input type = "text" id = "VoterAddress"><br>
+                Voter Age :- <br>
+                <input type = "text" id = "VoterAge"><br>
+            </form>
             <div id = "voter-button">
                <button>Add Voter</button>
             </div>

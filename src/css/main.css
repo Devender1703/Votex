@@ -10,16 +10,22 @@
 #voter-button{
     position: relative;
     left: 1000px;
-    top: -20px;
+    top: -130px;
 }
 
-.candidate-table{
+#candidate-table{
     position: relative;
     left: 100px;
 }
 
-.voter-table{
+#voter-table{
     position: relative;
     left: 900px;
-    top: -20px;
+    top: -30px;
+}
+
+#VoterForm{
+    position: relative;
+    left : 900px;
+    top : -150px;
 }
