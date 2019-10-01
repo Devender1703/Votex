@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Votex</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/web3.min.js"></script>
+        <script src="js/truffle-contract.js"></script>
+        <script src="js/app.js"></script>
+        
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+        <body>
+            <div id = "head">
+               <h1>Votex</h1>
+            </div>
+
+            <div id = "candidate-table">
+            <table>
+                <tr>
+                    <th>Name of candidate</th>
+                    <th>Count of votes </th>
+                </tr> 
+            </table>
+           </div>
+            
+           <div id = "voter-table">
+            <table>
+                <tr>
+                    <th>Name of voter</th>
+                    <th>Status</th>
+                </tr>
+            </table>
+            </div>
+
+            <form id = "CandidateForm">
+                Candidate Name :- <br>
+                <input type = "text" id = "candidateName"> <br>
+                Candidate address :- <br>
+                <input type = "text" id = "candidateAddress"> <br>
+                Candidate Age :- <br>
+                <input type = "text" id = "candidateAge"><br>
+            </form>
+            <br>
+            <div id = "candidate-button">
+                    <button>Add candidate</button>
+            </div>
+
+            <form id = "VoterForm">
+                Voter Name :- <br>
+                <input type = "text" id = "VoterName"> <br>
+                Voter address :- <br>
+                <input type = "text" id = "VoterAddress"><br>
+                Voter Age :- <br>
+                <input type = "text" id = "VoterAge"><br>
+            </form>
+            <div id = "voter-button">
+               <button>Add Voter</button>
+            </div>
+
+            <form id = "VotingForm">
+                From : - <br>
+                <input type = "text" id = "VoterAddress"> to 
+                <input type = "text" id = "CandidateAddress"> 
+            </form>
+            
+            <div id = "SubmitVote">
+            <button type = "button" name = "submitVote">Vote</button>
+            </div>
+
+            <div id = "ResultOfVoting">
+            <button type = "button" name = "Result"> Result </button>
+            </div>
+
+        </body>
+</html>
